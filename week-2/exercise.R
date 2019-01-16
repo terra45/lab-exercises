@@ -1,6 +1,7 @@
 ## Part 1: Debugging
 
 my_num <- 6
+
 initials <- "?. ?."
 
 my_vector <- c(my_num, initials)
@@ -9,7 +10,7 @@ my_vector <- c(my_num, initials)
 vector_sum <- sum(my_vector)
 
 # Describe why this doesn't work: 
-# 
+#It does not work because you can't take the sum of a string of character and numbers
 
 install.packages("stringr")
 
@@ -18,21 +19,16 @@ my_line <- "Hey, hey, this is the library"
 print(str_length(my_line))
 
 # Describe why this doesn't work: 
-# 
+# This does not work because it forgot to add the 'stringr' package to the library
 
-said_the_famous <- paste(my_line, " - ", initial)
-
-# Describe why this doesn't work: 
-# 
-
-
-## Part 2 - Vector and function practice
-
-# Make a vector and use typeof to check what type R considers it to be
+# Make a vector and use typeof to check what type R considers it to be                ???????
 
 # Write a function `compare_length` that takes in 2 vectors, and returns the sentence:
 # "The difference in lengths is N"
-
+compare_length <- function(a, b){
+  answer <- a - b
+  paste0("The difference in lengths is ", answer)
+}
 
 # Pass two vectors of different length to your `compare_length` function
 
